@@ -7,21 +7,59 @@
   --font-funnel: "Funnel Display", "serif";
 }
 
-@keyframes float {
+@keyframes float-normal {
   0% {
-    transform: translateY(100vh) scale(1);
+    transform: translateY(100vh) scale(1) rotate(0deg);
     opacity: 1;
   }
   50% {
-    transform: translateY(50vh) scale(1.2);
+    transform: translateY(50vh) scale(1.2) rotate(180deg);
     opacity: 0.8;
   }
   100% {
-    transform: translateY(0) scale(0.8);
+    transform: translateY(0) scale(0.8) rotate(360deg);
     opacity: 0.2;
   }
 }
 
-.animate-float {
-  animation: float linear infinite;
+@keyframes float-reverse {
+  0% {
+    transform: translateY(100vh) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) scale(1.2) rotate(-180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(0.8) rotate(-360deg);
+    opacity: 0.2;
+  }
+}
+
+@keyframes float-wobble {
+  0% {
+    transform: translateY(100vh) scale(1) rotate(-45deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) scale(1.2) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(0.8) rotate(-45deg);
+    opacity: 0.2;
+  }
+}
+
+.animate-float-normal {
+  animation: float-normal linear infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse linear infinite;
+}
+
+.animate-float-wobble {
+  animation: float-wobble linear infinite;
 }

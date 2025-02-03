@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const FloatingHearts = () => {
   const [hearts, setHearts] = useState([]);
+  const rotationTypes = ["normal", "reverse", "wobble"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,6 +14,8 @@ const FloatingHearts = () => {
             id: Math.random(),
             left: Math.random() * 100,
             duration: Math.random() * 3 + 3,
+            rotationType:
+              rotationTypes[Math.floor(Math.random() * rotationTypes.length)],
           },
         ];
       });
@@ -26,7 +29,7 @@ const FloatingHearts = () => {
       {hearts.map((heart) => (
         <span
           key={heart.id}
-          className="absolute animate-float text-base md:text-[20px]"
+          className={`absolute animate-float-${heart.rotationType} text-base md:text-[20px]`}
           style={{
             left: `${heart.left}%`,
             animationDuration: `${heart.duration}s`,

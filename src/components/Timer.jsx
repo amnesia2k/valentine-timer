@@ -4,7 +4,7 @@ export default function Timer() {
   const valDate = new Date(
     `February 14, ${new Date().getFullYear()} 00:00:00`
   ).getTime();
-  // console.log(valDate);
+  // console.log(`February 14, ${new Date().getFullYear()}`);
 
   const [timeLeft, setTimeLeft] = useState({
     days: new Date().getDate(),

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Kalam:wght@300;400;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-kalam: "Kalam", "serif";
+  --font-funnel: "Funnel Display", "serif";
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}

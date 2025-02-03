@@ -12,7 +12,7 @@ const FloatingHearts = () => {
           {
             id: Math.random(),
             left: Math.random() * 100,
-            size: Math.random() * 20 + 20,
+            // size: Math.random() * 20 + 20,
             duration: Math.random() * 3 + 3,
           },
         ];
@@ -27,10 +27,10 @@ const FloatingHearts = () => {
       {hearts.map((heart) => (
         <span
           key={heart.id}
-          className="absolute animate-float"
+          className="absolute animate-float text-sm md:text-[20px]"
           style={{
             left: `${heart.left}%`,
-            fontSize: `${heart.size}px`,
+            // fontSize: `${heart.size}px`,
             animationDuration: `${heart.duration}s`,
           }}
         >

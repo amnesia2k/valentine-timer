@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 
 export default function Timer() {
-  const valDate = new Date("February 14, 2025 00:00:00").getTime();
+  const valDate = new Date(
+    `February 14, ${new Date().getFullYear()} 00:00:00`
+  ).getTime();
   // console.log(valDate);
 
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    days: new Date().getDate(),
+    hours: new Date().getHours(),
+    minutes: new Date().getMinutes(),
+    seconds: new Date().getSeconds(),
   });
 
   const calcTimeLeft = () => {

@@ -27,7 +27,7 @@ const FloatingHearts = () => {
       {hearts.map((heart) => (
         <span
           key={heart.id}
-          className="absolute animate-float text-red-500 opacity-50"
+          className="absolute animate-float"
           style={{
             left: `${heart.left}%`,
             fontSize: `${heart.size}px`,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const FloatingHearts = () => {
+export default function FloatingHearts() {
   const [hearts, setHearts] = useState([]);
   const rotationTypes = ["normal", "reverse", "wobble"];
 
@@ -40,6 +40,4 @@ const FloatingHearts = () => {
       ))}
     </div>
   );
-};
-
-export default FloatingHearts;
+}
